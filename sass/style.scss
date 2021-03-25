@@ -1,0 +1,241 @@
+
+$theme-color:#082B48; 
+
+$breakpoints: (
+    'sp': 'screen and (max-width: 767px)', 
+    'pc': 'screen and (min-width: 768px)'
+  ) !default;
+  
+@mixin mq($breakpoint: sp) {
+    @media #{map-get($breakpoints, $breakpoint)} {
+      @content;
+    }
+  }
+
+  body {
+    color:$theme-color;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 1.5;
+  }
+  
+  img{
+    width: 100%;
+    height: auto;
+  }
+  ul {
+    list-style: none;
+  }
+  
+  a{
+    text-decoration: none;
+    color:$theme-color;
+      &:hover{
+      opacity: 0.7;
+     }
+   }
+  .container{
+    width: 90%;
+    max-width: 980px;
+    margin: auto;
+  }
+  .clear::after{
+    content:"";
+    clear: both;
+    display: block;
+    @include mq(sp){
+      content: none;
+    }
+  }
+  
+  /*===========================================
+  Header
+  ============================================*/
+  .header{
+    padding: 20px 0px;
+  }
+  .header-title{
+    font-weight: bold;
+    font-size: 24px;
+      @include mq(sp) {
+      text-align: center;
+    }
+  }
+  .header-left{
+    float:left;
+      @include mq(sp){
+      float:none
+    }
+  }
+  .header-right{
+    float:right;
+      @include mq(sp){
+      float: none;
+    }
+  }
+  .header-nav{
+  @include mq(sp){
+      display:flex;
+      justify-content:space-between;
+    }
+  }
+  .header-nav-item{
+    float: left;
+    margin-left: 50px;
+    @include mq(sp){
+      float:none;
+      margin: 0;
+    }
+  }
+  .header-nav-item a {
+    font-size: 15px;
+    font-weight:600;
+    line-height:36px;
+   }
+  
+  /*===========================================
+  top
+  ============================================*/
+  .top{
+    background-image: url(../img/main-vsual-nontitle.png);
+    background-size: cover;
+    padding: 80px 0;
+      @include mq(sp) {
+      padding: 120px 0;
+    }
+  }
+  .top-title{
+    font-size: 48px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+      @include mq(sp) {
+      font-size: 32px;
+    }
+  }
+  .top-subtitle{
+    font-size: 18px;
+    text-align: center;
+      @include mq(sp) {
+      font-size: 14px;
+    }
+  }
+  /*===========================================
+  sectionの共通クラスを設定していく
+  ============================================*/
+  .section{
+    padding: 60px 0; 
+      @include mq(sp) {
+      padding: 80px 0;
+    }
+  }
+  .section-title{
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 40px;
+      @include mq(sp) {
+      font-size: 24px;
+    }
+  }
+  .section p {
+    font-size: 14px;
+  }
+  
+  /*===========================================
+  about
+  ============================================*/
+  .about-left{
+    float:left;
+    width: 48%;
+    @include mq(sp){
+      float:none;
+      width: 100%;
+    }
+  }
+  .about-right{
+    float:right;
+    width: 48%;
+    @include mq(sp){
+      float:none;
+      width:100%;
+    }
+  }
+  /*===========================================
+  course
+  ============================================*/
+  .course{
+    background-color:#e3fcf4;
+  }
+  .course-wrapper{
+    display: flex;
+    justify-content: space-between;
+      @include mq(sp) {
+      flex-wrap: wrap;
+    }
+  }
+  .course-item{
+    width:  30%;
+      @include mq(sp) {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  }
+  /*===========================================
+  contact
+  ============================================*/
+  
+  .contact-message{
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  input[type="email"]{
+    width: 600px;
+    border:3px solid #d8d8d8;
+    font-size: 18px;
+    display: block;
+    margin: auto;
+    padding: 15px;
+    border-radius: 999px;
+    margin-bottom: 20px;
+      @include mq(sp) {
+      width: 100%;
+    }
+  }
+  .btn{
+    padding: 20px 60px;
+    display: inline-block;
+    background-color:$theme-color;
+    color:#fff;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 4px;
+    border: none;
+  
+    &.btn:hover{
+    opacity: 0.7;
+    cursor: pointer;
+    }
+}
+  .btn-register{
+    background-color: #ec6d64;
+    display: block;
+    margin: auto;
+  }
+  /*===========================================
+  footer
+  ============================================*/
+  footer{
+    background-color:$theme-color;
+    color:#fff;
+    padding: 20px 0;
+  }
+  .copyright{
+    font-size: 12px;
+    float:right;
+    @include mq(sp) {
+      font-size: 10px;
+      text-align: center;
+    }
+  }
+  
+  

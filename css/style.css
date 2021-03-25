@@ -1,0 +1,307 @@
+@charset "UTF-8";
+body {
+  color: #082B48;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  line-height: 1.5;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #082B48;
+}
+
+a:hover {
+  opacity: 0.7;
+}
+
+.container {
+  width: 90%;
+  max-width: 980px;
+  margin: auto;
+}
+
+.clear::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+@media screen and (max-width: 767px) {
+  .clear::after {
+    content: none;
+  }
+}
+
+/*===========================================
+  Header
+  ============================================*/
+.header {
+  padding: 20px 0px;
+}
+
+.header-title {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+@media screen and (max-width: 767px) {
+  .header-title {
+    text-align: center;
+  }
+}
+
+.header-left {
+  float: left;
+}
+
+@media screen and (max-width: 767px) {
+  .header-left {
+    float: none;
+  }
+}
+
+.header-right {
+  float: right;
+}
+
+@media screen and (max-width: 767px) {
+  .header-right {
+    float: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .header-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+.header-nav-item {
+  float: left;
+  margin-left: 50px;
+}
+
+@media screen and (max-width: 767px) {
+  .header-nav-item {
+    float: none;
+    margin: 0;
+  }
+}
+
+.header-nav-item a {
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 36px;
+}
+
+/*===========================================
+  top
+  ============================================*/
+.top {
+  background-image: url(../img/main-vsual-nontitle.png);
+  background-size: cover;
+  padding: 80px 0;
+}
+
+@media screen and (max-width: 767px) {
+  .top {
+    padding: 120px 0;
+  }
+}
+
+.top-title {
+  font-size: 48px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 767px) {
+  .top-title {
+    font-size: 32px;
+  }
+}
+
+.top-subtitle {
+  font-size: 18px;
+  text-align: center;
+}
+
+@media screen and (max-width: 767px) {
+  .top-subtitle {
+    font-size: 14px;
+  }
+}
+
+/*===========================================
+  sectionの共通クラスを設定していく
+  ============================================*/
+.section {
+  padding: 60px 0;
+}
+
+@media screen and (max-width: 767px) {
+  .section {
+    padding: 80px 0;
+  }
+}
+
+.section-title {
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+@media screen and (max-width: 767px) {
+  .section-title {
+    font-size: 24px;
+  }
+}
+
+.section p {
+  font-size: 14px;
+}
+
+/*===========================================
+  about
+  ============================================*/
+.about-left {
+  float: left;
+  width: 48%;
+}
+
+@media screen and (max-width: 767px) {
+  .about-left {
+    float: none;
+    width: 100%;
+  }
+}
+
+.about-right {
+  float: right;
+  width: 48%;
+}
+
+@media screen and (max-width: 767px) {
+  .about-right {
+    float: none;
+    width: 100%;
+  }
+}
+
+/*===========================================
+  course
+  ============================================*/
+.course {
+  background-color: #e3fcf4;
+}
+
+.course-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media screen and (max-width: 767px) {
+  .course-wrapper {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+.course-item {
+  width: 30%;
+}
+
+@media screen and (max-width: 767px) {
+  .course-item {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+/*===========================================
+  contact
+  ============================================*/
+.contact-message {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+input[type="email"] {
+  width: 600px;
+  border: 3px solid #d8d8d8;
+  font-size: 18px;
+  display: block;
+  margin: auto;
+  padding: 15px;
+  border-radius: 999px;
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 767px) {
+  input[type="email"] {
+    width: 100%;
+  }
+}
+
+.btn {
+  padding: 20px 60px;
+  display: inline-block;
+  background-color: #082B48;
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+  border-radius: 4px;
+  border: none;
+}
+
+.btn.btn:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.btn-register {
+  background-color: #ec6d64;
+  display: block;
+  margin: auto;
+}
+
+/*===========================================
+  footer
+  ============================================*/
+footer {
+  background-color: #082B48;
+  color: #fff;
+  padding: 20px 0;
+}
+
+.copyright {
+  font-size: 12px;
+  float: right;
+}
+
+@media screen and (max-width: 767px) {
+  .copyright {
+    font-size: 10px;
+    text-align: center;
+  }
+}
